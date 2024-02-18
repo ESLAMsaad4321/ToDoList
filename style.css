@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri;
+}
+
+.parent{
+    background: linear-gradient(135deg,#188aa1,#1c0322);
+    padding: 10px;
+    height: 100vh;
+    width:100vw ;
+}
+.container{
+    background-color: white;
+    width: 600px;
+    max-width: 700px;
+    border-radius: 10px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+
+}
+h2{
+    font-size: 1.4rem;
+    color: #002765;
+    display:flex;
+}
+img{
+    padding-left:1rem ;
+    height: 2rem;
+    width: 3.5rem;
+    background-size: 100%;
+}
+.input{
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.input input {
+    font-size: 1.6rem;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding:10px ;
+    font-weight: 500;
+
+}
+.input button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background:#ff5945;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+}
+ul li{
+    font-weight: 700;
+    font-size: 1.5rem;
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(noun-unchecked-1519073.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+ul li.checked::before{    
+    background-image: url(noun-unchecked-1397594.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    color: #424040;
+    line-height: 40px;
+    text-align: center;
+}
+ul li span:hover{
+    border-radius: 30px;
+    color: #ffffff;
+    background: #b5acac;
+}
+@media only screen and (max-width:992px) {
+    .container{
+        width: 400px;
+        max-width: 450px;
+    }
+    .input{
+        flex-wrap: wrap;
+    }
+    .input input {
+        text-align: center;
+    }
+    h2 {
+        justify-content: center;
+    }
+}
+@media only screen and (max-width:500px){
+    .container{
+        width: 300px;
+        max-width: 350px;
+    }
+}
